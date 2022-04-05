@@ -21,7 +21,7 @@ export const App = () => {
   return (
     <div className="app">
       <form>
-        <h1>D&D Token Generator</h1>
+        <h1>VTT Token Generator</h1>
         <hr />
         <FilePicker setImageToRender={setImageToRender} />
         <hr />

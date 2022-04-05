@@ -12,9 +12,11 @@ export const FilePicker = (props: FilePickerProps) => {
   const handleReaderLoad = (event: ProgressEvent<FileReader>) => {
     if (event.target?.result) {
       const image = new Image();
-      const source = event.target.result as string;
-      image.src = source;
-      props.setImageToRender(image);
+      const source = event.target.result;
+      if (typeof source === "string") {
+        image.src = source;
+        props.setImageToRender(image);
+      }
     }
   };
 
